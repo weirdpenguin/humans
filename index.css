@@ -1,1 +1,46 @@
- 
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #2f2545;
+    color: #98969c;
+}
+
+.container {
+    width: 1550px;
+    margin: 50px auto;
+}
+
+.show_poster {
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: inset 100px -100px 140px 60px #2f2545;
+}
+
+#showPoster {
+    position: relative;
+    width: 500px;
+    z-index: -2;
+}
+
+.show_about_container {
+    text-transform: capitalize;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+#showOfficialSite {
+    color: #a22377;
+    text-decoration-line: none;
+    text-transform: lowercase;
+}
+
+.show_summary {
+    width: 900px;
+    font-size: 20px;
+}
