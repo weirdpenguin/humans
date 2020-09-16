@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let episodesContainer = document.getElementById('episodesContainer');
         let seasonSelectorContainer = document.getElementById('seasonSelectorContainer');
         let lastSeason = 0;
-        let episodesList = [];
+        // let episodesList = [];
 
         showEpisodes.forEach(function(episode) {
             if (episode.season > lastSeason) {
@@ -70,6 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         function renderSeason(activeSeason) {
+            let episodesList = [];
+            episodesContainer.textContent = null;                      /* !!! */
             showEpisodes.forEach(function(episodes) {
                 if (episodes.season == (activeSeason)) {
                     // console.log(episodes);
@@ -81,16 +83,27 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         function showSeason(episodes) {
-            console.log(episodes);
+            // console.log(episodes);
             episodes.forEach(function(episode) {
                 let showEpisode = document.createElement('div');
                 showEpisode.className = 'episode';
                 episodesContainer.append(showEpisode);
+
                 let showEpisodeNumber = document.createElement('p');
                 showEpisodeNumber.className = 'episode_number';
                 showEpisodeNumber.textContent = episode.number;
                 showEpisode.append(showEpisodeNumber);
-            })
+
+                let showEpisodePoster = document.createElement('img');
+                showEpisodePoster.setAttribute('src', episode.image.medium);
+                showEpisodePoster.className = 'episode_poster';
+                showEpisode.append(showEpisodePoster);
+
+                let showEpisodeSummary = document.createElement('p');
+                showEpisodeSummary.className = 'episode_summary';
+                showEpisodeSummary.innerHTML = episode.summary;
+                showEpisode.append(showEpisodeSummary);
+            });
         };
     };
 });
