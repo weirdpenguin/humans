@@ -15,13 +15,16 @@
             </div>
             <h1 id='showName'></h1>
             <div class='show_about_container'>
-                <p id='showStatus'>status:</p>
-                <p id='showGenres'>genres:</p>
-                <p id='showRating'>rating:</p>
+                <div><p>status: </p><span id='showStatus'></span></div>
+                <div><p>genres: </p><span id='showGenres'></span></div>
+                <div><p>raiting: </p><span id='showRating'></span></div>
                 <p>official site: <a id='showOfficialSite'></a></p>
             </div>
             <div id='showSummary' class='show_summary'></div>
-            <div class='showEpisodes'></div>
+            <div class='show_episodes'>
+                <div class='season_selector_container' id='seasonSelectorContainer'></div>
+                <div class='episodes_container' id='episodesContainer'></div>
+            </div>
         </div>
     </body>
 </html>

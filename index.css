@@ -13,7 +13,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    box-shadow: inset 100px -100px 140px 60px #2f2545;
+    box-shadow: inset 100px -100px 200px 50px #2f2545;
 }
 
 #showPoster {
@@ -26,6 +26,10 @@ body {
     text-transform: capitalize;
     font-size: 25px;
     margin-bottom: 50px;
+}
+
+.show_about_container > div {
+    display: flex;
 }
 
 h1 {
@@ -43,4 +47,29 @@ h1 {
 .show_summary {
     width: 900px;
     font-size: 20px;
+    margin-bottom: 80px;
+}
+
+.episode_list {
+    width: 500px;
+    height: 500px;
+}
+
+.select_number_season {
+    display: flex;
+    font-size: 30px;
+}
+
+.select_number_season > div {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background: #241b2f;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.select_number_season div:last-child {
+    margin-right: 0;
 }
