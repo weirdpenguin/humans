@@ -6,24 +6,24 @@
         <link rel='stylesheet' href='reset.css'>
         <link rel='stylesheet' href='index.css'>
         <script src='index.js'></script>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class='container'>
+        <form id='search_show'>
+            <input id='search_input'>
+            <button type='submit' class='search_button'>search</button>
+        </form>
+        <div id='show_not_exist'>Pardon us, but no shows matching your query were found.</div>
+        <div class='container' id='container'>
             <div class='show_poster'>
-                <img id='showPoster'></img>
+                <img id='show_poster'></img>
             </div>
-            <h1 id='showName'></h1>
-            <div class='show_about_container'>
-                <div><p>status: </p><span id='showStatus'></span></div>
-                <div><p>genres: </p><span id='showGenres'></span></div>
-                <div><p>raiting: </p><span id='showRating'></span></div>
-                <p>official site: <a id='showOfficialSite'></a></p>
-            </div>
-            <div id='showSummary' class='show_summary'></div>
+            <h1 id='show_name'></h1>
+            <div class='show_about_container'></div>
+            <div id='show_summary' class='show_summary'></div>
             <div class='show_episodes'>
-                <div class='season_selector_container' id='seasonSelectorContainer'></div>
-                <div class='episodes_container' id='episodesContainer'></div>
+                <div class='season_selector_container' id='season_selector_container'></div>
+                <div class='episodes_container' id='episodes_container'></div>
             </div>
         </div>
     </body>
